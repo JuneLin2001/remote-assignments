@@ -1,1 +1,1 @@
-The Remote Learning Assignment - Week 1 from Appworks School.
+The remote learning assignment from Appworks School.
