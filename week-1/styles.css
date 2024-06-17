@@ -1,0 +1,57 @@
+.header {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    gap:2em;
+}
+
+.WelcomeMessage{
+    background-color: #ccddee;
+    width: 100%;
+    padding: 30px;
+    margin:1em auto;
+    text-align: center;
+}
+
+section h2{
+    width: 50%;
+    margin:1em auto;
+    text-align: center;
+    padding: auto;
+}
+
+section div{
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: minmax(auto , 600px) minmax(auto , 600px);
+    gap: 30px;
+}
+
+.CallToAction{
+    background-color: #ddeeff;
+    text-align:center;
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+
+}
+
+.card{
+    background-color: #89a;
+    text-align: center;
+    height: 10em;
+    max-width: 600px;
+}
+
+body{
+    margin: 0;
+}
