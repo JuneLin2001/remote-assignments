@@ -58,7 +58,6 @@ section div {
     height: 8em;
     display: flex;
     flex: 1 1 45%;
-    max-width: 1200px;
     justify-content: center;
     flex-direction: row;
     margin: 5px 5px auto;
