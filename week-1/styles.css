@@ -1,5 +1,4 @@
-html,
-body {
+html,body {
     height: 100%;
     margin: 0;
 }
@@ -9,7 +8,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 ul {
@@ -25,9 +25,11 @@ ul {
 .WelcomeMessage {
     background-color: #cde;
     width: 100%;
-    padding: 30px;
+    height: 5em;
     margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section h2 {
@@ -45,12 +47,12 @@ section div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 1210px;
+    max-width: 1180px;
     margin: auto;
     justify-content: center;
     align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .box {
@@ -65,16 +67,15 @@ section div {
 
 .CallToAction {
     background-color: #ddeeff;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-top: 1em;
+    margin: 1em auto 0;
     width: 8em;
     height: 3em;
-    line-height: 3em;
 }
 
-@media(max-width:800px) {
+@media (max-width:799.9px) {
     ul {
         display: none;
     }
@@ -84,7 +85,7 @@ section div {
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:499.9px) {
     .box {
         flex: 1 1 100%;
         max-width: 100%;
