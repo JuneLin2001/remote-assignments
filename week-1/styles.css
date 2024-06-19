@@ -1,58 +1,77 @@
-.header {
-    background-color: #eeeeee;
+header {
+    background-color: #eee;
     display: flex;
     justify-content: space-between;
 }
 
-ul{
+ul {
     display: flex;
-    gap:2em;
+    gap: 2em;
     list-style: none;
 }
 
-.WelcomeMessage{
-    background-color: #ccddee;
+.menu-trigger {
+    display: none;
+}
+
+.WelcomeMessage {
+    background-color: #cde;
     width: 100%;
     padding: 30px;
-    margin:1em auto;
+    margin: 1em auto;
     text-align: center;
 }
 
-section h2{
+section h2 {
     width: 50%;
-    margin:1em auto;
+    margin: 1em auto;
     text-align: center;
     padding: auto;
 }
 
-section div{
+section div {
     display: flex;
     justify-content: center;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: minmax(auto , 600px) minmax(auto , 600px);
-    gap: 30px;
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 800px;
+    margin: auto;
 }
 
-.CallToAction{
+.CallToAction {
     background-color: #ddeeff;
-    text-align:center;
+    text-align: center;
     margin: auto;
     margin-top: 10px;
     width: 300px;
-
 }
 
-.card{
+.box {
     background-color: #89a;
-    text-align: center;
-    height: 10em;
     max-width: 600px;
+    min-width: 250px;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1rem;
 }
 
-body{
+body {
     margin: 0;
+}
+
+@media(max-width:800px) {
+    ul {
+        display: none;
+        list-style: none;
+    }
+
+    .menu-trigger {
+        display: grid;
+    }
 }
