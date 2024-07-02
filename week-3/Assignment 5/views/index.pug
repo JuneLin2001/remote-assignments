@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+  h1 Welcome to the Index Page
+  form(action='/trackName', method='get')
+    label(for='username') Enter your name:
+    input(type='text', id='username', name='name')
+    button(type='submit') Submit
