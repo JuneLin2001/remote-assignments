@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -22,17 +22,19 @@ app.listen(port, () => {
 //Assignment 2: Build Backend API for Front-End
 
 app.get("/getData", (req, res) => {
-  const number = parseInt(req.query.number, 10);
-
-  if (!req.query.number) {
-    res.send("<h1>Lack of Parameter</h1>");
-  } else if (isNaN(number) || number <= 0) {
-    res.send("<h1>Wrong Parameter</h1>");
-  } else {
-    const result = (number * (number + 1)) / 2;
-    res.send(`<h1>${result}</h1>`);
-  }
+  const number = req.query.number;
+  if (!number) {
+    res.send('<h1>Lack of Parameter</h1>')
+  } 
+  else if(isNaN(number)){
+    res.send('<h1>Wrong Parameter" message</h1>')
+    }
+    else {
+      const result = (number * (number + 1)) / 2;
+      res.send(`<h1>${result}</h1>`);
+    }
 });
+
 
 //Assignment 3: Connect to Backend API by AJAX
 app.use(express.static('public'))
