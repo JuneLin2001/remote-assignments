@@ -24,7 +24,7 @@ app.listen(port, () => {
 app.get("/getData", (req, res) => {
   const number = parseInt(req.query.number,10); //ㄛ幹剛剛出了一個bug是1+1會變成11，解決方法是在這邊用parseInt函式來把字串轉成數字，破破JS= =
    
-  if (!req.query.number) {
+  if (!req.query.number) { //這邊不能用!number，因為如果輸入xyz這種不是數字的話會被判斷成NaN，!number的話會讓xyz卡在這而不是進到else if
     res.send('<h1>Lack of Parameter</h1>')
   } 
   else if(isNaN(number)){
