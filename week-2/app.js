@@ -24,10 +24,10 @@ menuClose.addEventListener('click', () => {
 // Request 3: Click to Show More Content Boxes.
 const callToAction = document.querySelector('.CallToAction');
 callToAction.addEventListener('click', () => {
-    if (document.querySelector('.display-none').style.display === 'none') {
-        document.querySelector('.display-none').style.display = 'flex';
+    if (document.querySelector('.display-none').style.display !== 'none') {
+        document.querySelector('.display-none').style.display = 'none';
     }
     else {
-        document.querySelector('.display-none').style.display = 'none';
+        document.querySelector('.display-none').style.display = 'flex';
     }
 })
