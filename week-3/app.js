@@ -22,15 +22,15 @@ app.listen(port, () => {
 //Assignment 2: Build Backend API for Front-End
 
 app.get("/getData", (req, res) => {
-  const number = parseInt(req.query.number,10); //ㄛ幹剛剛出了一個bug是1+1會變成11，解決方法是在這邊用parseInt函式來把字串轉成數字，破破JS= = 
-  if (!number) {
+  const number = parseInt(req.query.number,10); //ㄛ幹剛剛出了一個bug是1+1會變成11，解決方法是在這邊用parseInt函式來把字串轉成數字，破破JS= =
+   
+  if (!req.query.number) {
     res.send('<h1>Lack of Parameter</h1>')
   } 
   else if(isNaN(number)){
     res.send('<h1>Wrong Parameter</h1>')
     }
   else {
-      (number,10)
       let result = (number * (number + 1)) / 2;
       res.send(`<h1>${result}</h1>`);
     }
