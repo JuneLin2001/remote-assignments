@@ -18,12 +18,13 @@
       document.getElementById("sumForm").addEventListener("submit", (event) => {
         event.preventDefault();
         const input = document.getElementById("input").value;
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", `/getData?number=${input}`, true);
-        xhr.onload = () => {
-          document.getElementById("Sum").innerHTML = xhr.responseText;
-        };
-        xhr.send();
+        fetch(`/getData?number=${input}`)
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("Sum").innerHTML = `<h1>${data}</h1>`;
+          })
       });
     </script>
   </body>
