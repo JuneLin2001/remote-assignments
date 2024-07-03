@@ -11,9 +11,9 @@ app.use(cookieParser());
 app.set("view engine", "pug");
 
 //Assignment 1: Your First Web Server
-app.get('/',  (req, res) => {
-  res.send('<h1>Hello, My Server!</h1>')
-})
+app.get("/", (req, res) => {
+  res.send("<h1>Hello, My Server!</h1>");
+});
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
@@ -22,25 +22,19 @@ app.listen(port, () => {
 //Assignment 2: Build Backend API for Front-End
 
 app.get("/getData", (req, res) => {
-  const number = parseInt(req.query.number,10); //ㄛ幹剛剛出了一個bug是1+1會變成11，解決方法是在這邊用parseInt函式來把字串轉成數字，破破JS= =
-   
-  if (!req.query.number) { //這邊不能用!number，因為如果輸入xyz這種不是數字的話會被判斷成NaN，!number的話會讓xyz卡在這而不是進到else if
-    res.send('<h1>Lack of Parameter</h1>')
-  } 
-  else if(isNaN(number)){
-    res.send('<h1>Wrong Parameter</h1>')
-    }
-  else {
-      let result = (number * (number + 1)) / 2;
-      res.send(`<h1>${result}</h1>`);
-    }
+  const number = parseInt(req.query.number, 10);
+  if (!req.query.number) {
+    res.send("<h1>Lack of Parameter</h1>");
+  } else if (isNaN(number)) {
+    res.send("<h1>Wrong Parameter</h1>");
+  } else {
+    let result = (number * (number + 1)) / 2;
+    res.send(`<h1>${result}</h1>`);
+  }
 });
 
-
 //Assignment 3: Connect to Backend API by AJAX
-app.use(express.static('public'))
-
-
+app.use(express.static("public"));
 
 //Assignment 5: HTTP Cookie (Advanced Optional)
 app.get("/enterName", (req, res) => {
@@ -59,10 +53,10 @@ app.get("/myName", (req, res) => {
 app.get("/trackName", (req, res) => {
   const name = req.query.name;
   if (name) {
-    res.cookie('username', name);
+    res.cookie("username", name);
+
     res.redirect("/myName");
   } else {
     res.redirect("/");
   }
 });
-
