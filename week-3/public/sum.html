@@ -15,18 +15,16 @@
     <div id="Sum"></div>
 
     <script>
-      document
-        .getElementById("sumForm")
-        .addEventListener("submit", function (event) { //要submit之後才會執行，不然會一開始就Lack of Parameter
-          event.preventDefault();
-          const input = document.getElementById("input").value;
-          const xhr = new XMLHttpRequest();
-          xhr.open("GET", `/getData?number=${input}`, true);
-          xhr.onload = () => {
-            document.getElementById("Sum").innerHTML = xhr.responseText;
-          };
-          xhr.send();
-        });
+      document.getElementById("sumForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const input = document.getElementById("input").value;
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", `/getData?number=${input}`, true);
+        xhr.onload = () => {
+          document.getElementById("Sum").innerHTML = xhr.responseText;
+        };
+        xhr.send();
+      });
     </script>
   </body>
 </html>
