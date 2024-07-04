@@ -1,6 +1,6 @@
 function calculate(data) {
     // your code here
-    let { discount, products } = data;
+    const { discount, products } = data;
     let totalPrice = 0;
     
     for (let i = 0; i < products.length; i++) {

@@ -1,6 +1,6 @@
 function calculate(args) {
     // your code here
-    let { n1, n2, op } = args;
+    const { n1, n2, op } = args;
     let result;
     if (op === '+') {
         result = n1 + n2;
