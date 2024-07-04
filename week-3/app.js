@@ -58,9 +58,8 @@ app.get("/trackName", (req, res) => {
   const name = req.query.name;
   if (name) {
     res.cookie("username", name);
-
     res.redirect("/myName");
   } else {
-    res.redirect("/");
+    res.redirect("/myName");
   }
 });
