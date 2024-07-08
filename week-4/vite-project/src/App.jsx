@@ -1,6 +1,10 @@
 import "./App.css";
 import { useState } from "react";
 
+const ContentBox = ({ num }) => {
+  return <div className="box">Content Box {num}</div>;
+};
+
 const Header = () => {
   return (
     <header className="header">
@@ -33,19 +37,22 @@ const Header = () => {
   );
 };
 
-// Request 1: Click to Change Text.
-
 const Section = () => {
-    const [welcomeWord, setWelcomeWord] = useState("Welcome Message");
+  const [welcomeWord, setWelcomeWord] = useState("Welcome Message");
   return (
     <section>
-      <h1 id="WelcomeMessage" onClick={() => setWelcomeWord("Have a Good Time!")}>{welcomeWord}</h1>
+      <h1
+        id="WelcomeMessage"
+        onClick={() => setWelcomeWord("Have a Good Time!")}
+      >
+        {welcomeWord}
+      </h1>
       <h2>Section Title</h2>
       <div className="flex-container">
-        <div className="first box">Content Box 1</div>
-        <div className="box">Content Box 2</div>
-        <div className="box">Content Box 3</div>
-        <div className="box">Content Box 4</div>
+        <ContentBox num="1" />
+        <ContentBox num="2" />
+        <ContentBox num="3" />
+        <ContentBox num="4" />
       </div>
 
       <button
@@ -56,10 +63,10 @@ const Section = () => {
       </button>
 
       <div className="flex-container display-none">
-        <div className="first box">Content Box 5</div>
-        <div className="box">Content Box 6</div>
-        <div className="box">Content Box 7</div>
-        <div className="box">Content Box 8</div>
+        <ContentBox />
+        <ContentBox />
+        <ContentBox />
+        <ContentBox />
       </div>
     </section>
   );
