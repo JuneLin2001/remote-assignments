@@ -42,6 +42,7 @@ jobs:
         working-directory: remote-assignments/week-4
       - name: Build
         run: npm run build
+        working-directory: remote-assignments/week4
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
