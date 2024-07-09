@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: JuneLin2001/Test3310
+          repository: JuneLin2001/remote-assignments
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
