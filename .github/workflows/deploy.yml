@@ -16,13 +16,16 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-        cache-dependency-path: week-4/package-lock.json
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        working-directory: week-4
+
 
       - name: Build project
         run: npm run build
+        working-directory: week-4
+
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
