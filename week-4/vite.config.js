@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: { port: 3000 },
-  base:'https://junelin2001.github.io/remote-assignments/'
+  base:'/<remote-assignments>/'
 })
