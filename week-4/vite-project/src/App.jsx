@@ -1,8 +1,12 @@
 import "./App.css";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 const ContentBox = ({ num }) => {
   return <div className="box">Content Box {num}</div>;
+};
+ContentBox.propTypes = {
+  num: PropTypes.number.isRequired,
 };
 
 const Header = () => {
@@ -39,6 +43,7 @@ const Header = () => {
 
 const Section = () => {
   const [welcomeWord, setWelcomeWord] = useState("Welcome Message");
+  const [isHide, setIsHide] = useState(true);
   return (
     <section>
       <h1
@@ -57,19 +62,27 @@ const Section = () => {
 
       <button
         className="CallToAction"
-        onClick={() => console.log("CallToAction is on click")}
+        onClick={() => setIsHide(!isHide)}
       >
         Call to Action
       </button>
-
-      <div className="flex-container display-none">
-        <ContentBox />
-        <ContentBox />
-        <ContentBox />
-        <ContentBox />
-      </div>
+      <Hide isHide={isHide} />
     </section>
   );
+};
+
+const Hide = ({ isHide }) => {
+  return (
+    <div className={isHide ? "display-none" : "flex-container"}>
+      <ContentBox num="5" />
+      <ContentBox num="6" />
+      <ContentBox num="7" />
+      <ContentBox num="8" />
+    </div>
+  );
+};
+Hide.propTypes = {
+  isHide: PropTypes.bool.isRequired,
 };
 
 function App() {
