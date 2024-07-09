@@ -97,7 +97,6 @@ function App() {
     <>
       <Header />
       <Section />
-      <h2>Some change</h2>
     </>
   );
 }
