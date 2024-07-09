@@ -21,28 +21,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Single deploy job since we're just deploying
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
-      
+          node-version: 20
+          cache: 'npm'
       - name: Install dependencies
         run: npm install
-        working-directory: ./week-4  # 設置工作目錄到 week-4 文件夾下
-      
+        working-directory: ./week-4
       - name: Build project
         run: npm run build
-        working-directory: ./week-4  # 在 week-4 文件夾下運行建置命令
-      
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3
+        working-directory: ./week-4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: ./week-4/dist  # 假設建置生成的資源在 week-4 文件夾下的 dist 文件夾中
+          # Upload dist folder
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
