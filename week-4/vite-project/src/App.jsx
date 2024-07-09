@@ -22,6 +22,10 @@ const Hidemenu = ({ isHide, setIsHide }) => {
     </div>
   );
 };
+Hidemenu.propTypes = {
+  isHide: PropTypes.bool.isRequired,
+  setIsHide: PropTypes.func.isRequired,
+};
 
 const Header = () => {
   const [isHide, setIsHide] = useState(true);
