@@ -1,6 +1,6 @@
 ## Remote-assignments
 
-The remote learning assignments from [Appworks School](https://school.appworks.tw/).  
+The remote learning assignments from [Appworks School](https://school.appworks.tw/techacademy/).  
 
 | week | learning goals |preview link |
 | ------ | ------ |------ |
