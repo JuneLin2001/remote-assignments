@@ -80,7 +80,7 @@ const Section = () => {
 
 const Hide = ({ isHide }) => {
   return (
-    <div className={isHide ? "display-none" : "flex-container"}>
+    <div className={isHide ? "display-none flex-container" : "flex-container"}>
       <ContentBox num="5" />
       <ContentBox num="6" />
       <ContentBox num="7" />
