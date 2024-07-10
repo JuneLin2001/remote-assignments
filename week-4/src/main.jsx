@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Wireframe from './Counter.jsx'
+import APIresult from './Assignment-4.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    <Wireframe />
+    {/* <App /> */}
+    <APIresult />
   </React.StrictMode>,
 )
