@@ -1,6 +1,6 @@
 function delayedResult(n1, n2, delayTime, callback) {
   // your code here
-  window.setTimeout(function () {
+  window.setTimeout( () => {
     callback(n1 + n2);
   }, delayTime);
 }
