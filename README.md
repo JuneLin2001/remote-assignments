@@ -2,7 +2,7 @@
 
 The remote learning assignments from [Appworks School](https://school.appworks.tw/).  
 
-| week | Learning Objectives |link |
+| week | learning goals |preview link |
 | ------ | ------ |------ |
 | week 1 | HTML、CSS、RWD |https://junelin2001.github.io/remote-assignments/week-1/index.html |
 | week 2 | Javascript Basics、DOM | https://junelin2001.github.io/remote-assignments/week-2/index.html |
