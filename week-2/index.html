@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Remote Learning Assignment - Week 1</title>
+    <title>Remote Learning Assignment - Week 2</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -17,10 +17,20 @@
           <li>Item 3</li>
           <li>Item 4</li>
         </ul>
-        <div class="menu-trigger">&#9776;</div>
+        <div id="menu-trigger">&#9776;</div>
+
+        <div class="menu">
+          <div id="menu-close">X</div>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <h1 class="WelcomeMessage">Welcome Message</h1>
+    <h1 id="WelcomeMessage">Welcome Message</h1>
 
     <section>
       <h2>Section Title</h2>
@@ -30,10 +40,17 @@
         <div class="box">Content Box 3</div>
         <div class="box">Content Box 4</div>
       </div>
+
+      <button class="CallToAction">Call to Action</button>
+
+      <div class="flex-container display-none">
+        <div class="first box">Content Box 5</div>
+        <div class="box">Content Box 6</div>
+        <div class="box">Content Box 7</div>
+        <div class="box">Content Box 8</div>
+      </div>
     </section>
 
-    <footer>
-      <div class="CallToAction">Call to Action</div>
-    </footer>
+    <script src="app.js"></script>
   </body>
 </html>

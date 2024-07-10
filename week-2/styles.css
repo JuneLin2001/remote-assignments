@@ -1,0 +1,135 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#nav {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+
+#menu-trigger {
+  display: none;
+  cursor: pointer;
+}
+
+#WelcomeMessage {
+  background-color: #cde;
+  width: 100%;
+  height: 5em;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+section h2 {
+  width: 50%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+section div {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 1180px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+}
+
+.display-none {
+  display: none;
+}
+
+.box {
+  background-color: #89a;
+  height: 8em;
+  display: flex;
+  flex: 1 1 45%;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5px 5px auto;
+}
+
+.CallToAction {
+  background-color: #ddeeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto 0;
+  width: 8em;
+  height: 3em;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 799.9px) {
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+
+  #menu-trigger {
+    display: block;
+  }
+}
+
+@media (max-width: 499.9px) {
+  .box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.menu li {
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+#menu-close {
+  position: absolute;
+  text-align: right;
+  font-size: 20px;
+  top: 0;
+  right: 30px;
+  cursor: pointer;
+}
