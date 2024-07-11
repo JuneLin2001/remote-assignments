@@ -5,6 +5,18 @@ import PropTypes from "prop-types";
 const ContentBox = ({ num }) => {
   return <div className="box">Content Box {num}</div>;
 };
+
+const NavMenu = () => {
+  return (
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  );
+};
+
 ContentBox.propTypes = {
   num: PropTypes.number.isRequired,
 };
