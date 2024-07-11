@@ -1,6 +1,12 @@
-body {
-  background: #e8e7e7;
-  font-family: arial;
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.counter .btn {
+  margin-right: 10px;
 }
 
 .btn {
@@ -61,14 +67,4 @@ body {
 
 .btn:not(:disabled):active {
   transform: translateY(0.125rem);
-}
-
-.counter {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.counter .btn {
-  margin-right: 10px;
 }
