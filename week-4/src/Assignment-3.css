@@ -14,7 +14,7 @@ header {
   padding-right: 2em;
 }
 
-#nav {
+nav > ul {
   display: flex;
   gap: 2em;
   list-style: none;
@@ -85,7 +85,7 @@ section div {
 }
 
 @media (max-width: 799.9px) {
-  #nav {
+  nav > ul {
     display: none;
   }
   .menu {

@@ -27,12 +27,7 @@ const Hidemenu = ({ isHide, setIsHide }) => {
       <div id="menu-close" onClick={() => setIsHide(true)}>
         X
       </div>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-      </ul>
+      <NavMenu />
     </div>
   );
 };
@@ -47,12 +42,7 @@ const Header = () => {
     <header className="header">
       <div>Welcome Title / Logo</div>
       <nav>
-        <ul id="nav">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
+        <NavMenu />
         <div id="menu-trigger" onClick={() => setIsHide(!isHide)}>
           &#9776;
         </div>
