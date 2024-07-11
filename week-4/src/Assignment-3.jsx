@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 const ContentBox = ({ num }) => {
   return <div className="box">Content Box {num}</div>;
 };
+ContentBox.propTypes = {
+  num: PropTypes.number.isRequired,
+};
 
 const NavMenu = () => {
   return (
@@ -15,10 +18,6 @@ const NavMenu = () => {
       <li>Item 4</li>
     </ul>
   );
-};
-
-ContentBox.propTypes = {
-  num: PropTypes.number.isRequired,
 };
 
 const Hidemenu = ({ isHide, setIsHide }) => {
