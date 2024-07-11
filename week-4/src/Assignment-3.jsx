@@ -12,7 +12,9 @@ ContentBox.propTypes = {
 const Hidemenu = ({ isHide, setIsHide }) => {
   return (
     <div className={isHide ? "display-none" : "menu"}>
-      <div id="menu-close" onClick={() => setIsHide(true)}>X</div>
+      <div id="menu-close" onClick={() => setIsHide(true)}>
+        X
+      </div>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
@@ -39,10 +41,7 @@ const Header = () => {
           <li>Item 3</li>
           <li>Item 4</li>
         </ul>
-        <div
-          id="menu-trigger"
-          onClick={() => setIsHide(!isHide)}
-        >
+        <div id="menu-trigger" onClick={() => setIsHide(!isHide)}>
           &#9776;
         </div>
         <Hidemenu isHide={isHide} setIsHide={setIsHide} />
@@ -102,4 +101,3 @@ function Page() {
 }
 
 export default Page;
-

@@ -53,7 +53,10 @@ const APIresult = () => {
         ))}
       </ul>
       <div className="btn-container">
-        <button onClick={() => setPage((prevPage) => prevPage + 1)} className="button-6">
+        <button
+          onClick={() => setPage((prevPage) => prevPage + 1)}
+          className="button-6"
+        >
           More
         </button>
       </div>

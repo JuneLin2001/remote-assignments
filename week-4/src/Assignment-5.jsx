@@ -2,11 +2,13 @@ import "./Assignment-5.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-
 const Counter = ({ score, setScore }) => {
   return (
     <div className="counter">
-      <button onClick={() => setScore(score + 1)} className="btn"> +1</button>
+      <button onClick={() => setScore(score + 1)} className="btn">
+        {" "}
+        +1
+      </button>
       <p>{score}</p>
     </div>
   );
@@ -39,7 +41,7 @@ AddCounter.propTypes = {
 };
 
 const Wireframe = () => {
-  const [scores, setScores] = useState([0]); 
+  const [scores, setScores] = useState([0]);
 
   const incrementAll = () => {
     setScores(scores.map((score) => score + 1));
