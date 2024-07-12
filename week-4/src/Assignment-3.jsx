@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const ContentBox = ({ plus = 0 }) => {
-  let numBox = [1, 2, 3, 4];
+  const numBox = [1, 2, 3, 4];
   return numBox.map((num) => (
     <div key={num + plus} className="box">
       Content Box {num + plus}
