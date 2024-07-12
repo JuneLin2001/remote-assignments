@@ -4,6 +4,10 @@ import "./Assignment-4.css";
 const APIresult = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+  
+  useEffect(() => {
+    fetchData(page);
+  }, [page]);
 
   const fetchData = (page) => {
     const url = `https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`;
@@ -26,10 +30,6 @@ const APIresult = () => {
         document.getElementById("title").innerText = "Failed to fetch data";
       });
   };
-
-  useEffect(() => {
-    fetchData(page);
-  }, [page]);
 
   return (
     <div id="assignment4">
