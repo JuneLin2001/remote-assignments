@@ -11,10 +11,6 @@ const ContentBox = ({ plus = 0 }) => {
   ));
 };
 
-ContentBox.propTypes = {
-  num: PropTypes.number.isRequired,
-};
-
 const NavMenu = () => {
   return (
     <ul>
