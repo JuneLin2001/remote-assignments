@@ -2,9 +2,15 @@ import "./Assignment-3.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const ContentBox = ({ num }) => {
-  return <div className="box">Content Box {num}</div>;
+const ContentBox = ({ plus = 0 }) => {
+  let numBox = [1, 2, 3, 4];
+  return numBox.map((num) => (
+    <div key={num + plus} className="box">
+      Content Box {num + plus}
+    </div>
+  ));
 };
+
 ContentBox.propTypes = {
   num: PropTypes.number.isRequired,
 };
@@ -12,10 +18,10 @@ ContentBox.propTypes = {
 const NavMenu = () => {
   return (
     <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
+      <li>About</li>
+      <li>Products</li>
+      <li>Price</li>
+      <li>FAQ</li>
     </ul>
   );
 };
@@ -64,31 +70,25 @@ const Section = () => {
       </h1>
       <h2>Section Title</h2>
       <div className="flex-container">
-        <ContentBox num="1" />
-        <ContentBox num="2" />
-        <ContentBox num="3" />
-        <ContentBox num="4" />
+        <ContentBox />
       </div>
 
       <button className="CallToAction" onClick={() => setIsHide(!isHide)}>
         Call to Action
       </button>
-      <Hide isHide={isHide} />
+      <HideBoxes isHide={isHide} />
     </section>
   );
 };
 
-const Hide = ({ isHide }) => {
+const HideBoxes = ({ isHide }) => {
   return (
     <div className={isHide ? "display-none" : "flex-container"}>
-      <ContentBox num="5" />
-      <ContentBox num="6" />
-      <ContentBox num="7" />
-      <ContentBox num="8" />
+      <ContentBox plus={4} />
     </div>
   );
 };
-Hide.propTypes = {
+HideBoxes.propTypes = {
   isHide: PropTypes.bool.isRequired,
 };
 
