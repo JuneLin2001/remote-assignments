@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const ContentBox = ({ plus = 0 }) => {
   const numBox = [1, 2, 3, 4];
   return numBox.map((num) => (
-    <div key={num + plus} className="box">
+    <div key={num} className="box">
       Content Box {num + plus}
     </div>
   ));
